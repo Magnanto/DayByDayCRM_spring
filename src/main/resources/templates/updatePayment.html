@@ -214,49 +214,34 @@
     </div>
   </nav>
   <!-- End Navbar -->
-
-  <div class="row mt-4">
-    <div class="col-12">
-      <div class="card ">
-        <div class="card-header pb-0 p-3">
-          <div class="d-flex justify-content-between">
-            <h6 class="mb-2">Listes des paiements</h6>
-          </div>
+  <div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-4">
+        <div class="card-header pb-0">
+          <h6>Mise à jour payment</h6>
         </div>
-        <div class="table-responsive">
+        <div class="card-body">
+          <form th:action="@{/payment/update}" method="POST">
+            <div class="mb-3">
+              <label class="form-label">Identifiant paiement</label>
+              <input type="number" class="form-control" th:value="${payment.getId()}" name="id" readonly>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Montant</label>
+              <input type="number" class="form-control" placeholder="Entrez le montant" th:value="${payment.getAmount()}" name="montant">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Confirmer l'Achat</button>
+          </form>
           <div th:if="${message}" class="alert alert-info mt-3" role="alert">
             <span th:text="${message}"></span>
           </div>
-          <table class="table align-items-center ">
-            <thead>
-            <tr>
-              <th>Date</th>
-              <th>Invoice Id</th>
-              <th>Source</th>
-              <th>Montant</th>
-              <th>Status</th>
-              <th></th>
-            </tr>
-            </thead>
-            <tbody>
-              <tr th:each="payment : ${payments}">
-                <td th:text="${payment.getCreated_at()}"></td>
-                <td th:text="${payment.getInvoice().getExternal_id()}"></td>
-                <td th:text="${payment.getPayment_source()}"></td>
-                <td th:text="${payment.getAmount()}"></td>
-                <td th:text="${payment.getInvoice().getStatus()}"></td>
-                <td>
-                  <button><a th:href="@{/payment/update(id=${payment.getId()})}" th:text="Update"></a></button>
-                  <button><a th:href="@{/payment/delete(id=${payment.getId()})}" th:text="Delete"></a></button>
-
-                </td>
-
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </div>
+  </div>
+  </div>
   </div>
 </main>
 

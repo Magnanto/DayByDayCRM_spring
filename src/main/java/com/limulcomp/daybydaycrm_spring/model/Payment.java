@@ -1,5 +1,7 @@
 package com.limulcomp.daybydaycrm_spring.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.time.LocalDateTime;
 
 public class Payment {
@@ -8,13 +10,18 @@ public class Payment {
     int amount;
     String description;
     String payment_source;
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'")
     LocalDateTime payment_date;
     Integer integration_payment_id;
     String integration_type;
     Integer invoice_id;
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'")
     LocalDateTime deleted_at;
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'")
     LocalDateTime created_at;
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'")
     LocalDateTime updated_at;
+    Invoice invoice;
 
     public Payment() {
     }
@@ -113,5 +120,13 @@ public class Payment {
 
     public void setUpdated_at(LocalDateTime updated_at) {
         this.updated_at = updated_at;
+    }
+
+    public Invoice getInvoice() {
+        return invoice;
+    }
+
+    public void setInvoice(Invoice invoice) {
+        this.invoice = invoice;
     }
 }
