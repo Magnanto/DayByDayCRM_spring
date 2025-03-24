@@ -1,24 +1,24 @@
 package com.limulcomp.daybydaycrm_spring.model;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-public class Task {
+public class Lead {
     int id;
     String external_id;
     String title;
     String description;
     Integer status_id;
     Integer user_assigned_id;
-    Integer user_created_id;
     Integer client_id;
-    Integer project_id;
+    Integer user_created_id;
+    Integer qualified;
+    String result;
     LocalDateTime deadline;
     LocalDateTime deleted_at;
     LocalDateTime created_at;
     LocalDateTime updated_at;
 
-    public Task() {
+    public Lead() {
     }
 
     public int getId() {
@@ -69,14 +69,6 @@ public class Task {
         this.user_assigned_id = user_assigned_id;
     }
 
-    public Integer getUser_created_id() {
-        return user_created_id;
-    }
-
-    public void setUser_created_id(Integer user_created_id) {
-        this.user_created_id = user_created_id;
-    }
-
     public Integer getClient_id() {
         return client_id;
     }
@@ -85,12 +77,28 @@ public class Task {
         this.client_id = client_id;
     }
 
-    public Integer getProject_id() {
-        return project_id;
+    public Integer getUser_created_id() {
+        return user_created_id;
     }
 
-    public void setProject_id(Integer project_id) {
-        this.project_id = project_id;
+    public void setUser_created_id(Integer user_created_id) {
+        this.user_created_id = user_created_id;
+    }
+
+    public Integer getQualified() {
+        return qualified;
+    }
+
+    public void setQualified(Integer qualified) {
+        this.qualified = qualified;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
     }
 
     public LocalDateTime getDeadline() {
