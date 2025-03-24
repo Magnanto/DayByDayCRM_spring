@@ -214,392 +214,179 @@
     </div>
   </nav>
   <!-- End Navbar -->
-  <div class="container-fluid py-4">
-    <div class="row">
-      <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-        <div class="card">
-          <div class="card-body p-3">
-            <div class="row">
-              <div class="col-8">
-                <div class="numbers">
-                  <p class="text-sm mb-0 text-uppercase font-weight-bold">Total Clients</p>
-                  <h5 class="font-weight-bolder" th:text="${totals.totalClients}">
-                  </h5>
-                </div>
-              </div>
-            </div>
+
+  <div class="row mt-4">
+    <div class="col-12">
+      <div class="card ">
+        <div class="card-header pb-0 p-3">
+          <div class="d-flex justify-content-between">
+            <h6 class="mb-2">Listes des paiements</h6>
           </div>
         </div>
-      </div>
-
-      <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-        <div class="card">
-          <div class="card-body p-3">
-            <div class="row">
-              <div class="col-8">
-                <div class="numbers">
-                  <p class="text-sm mb-0 text-uppercase font-weight-bold">Total Projects</p>
-                  <h5 class="font-weight-bolder" th:text="${totals.totalProjects}">
-                  </h5>
+        <div class="table-responsive">
+          <table class="table align-items-center ">
+            <tbody>
+            <tr>
+              <td class="w-30">
+                <div class="d-flex px-2 py-1 align-items-center">
+                  <div>
+                    <img src="../assets/img/icons/flags/US.png" alt="Drapeau pays">
+                  </div>
+                  <div class="ms-4">
+                    <p class="text-xs font-weight-bold mb-0">Pays:</p>
+                    <h6 class="text-sm mb-0">États-Unis</h6>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
+              </td>
+              <td>
+                <div class="text-center">
+                  <p class="text-xs font-weight-bold mb-0">Ventes:</p>
+                  <h6 class="text-sm mb-0">2500</h6>
+                </div>
+              </td>
+              <td>
+                <div class="text-center">
+                  <p class="text-xs font-weight-bold mb-0">Valeur:</p>
+                  <h6 class="text-sm mb-0">230 900 €</h6>
+                </div>
+              </td>
+              <td class="align-middle text-sm">
+                <div class="col text-center">
+                  <p class="text-xs font-weight-bold mb-0">Rebond:</p>
+                  <h6 class="text-sm mb-0">29.9%</h6>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-30">
+                <div class="d-flex px-2 py-1 align-items-center">
+                  <div>
+                    <img src="../assets/img/icons/flags/DE.png" alt="Drapeau pays">
+                  </div>
+                  <div class="ms-4">
+                    <p class="text-xs font-weight-bold mb-0">Pays:</p>
+                    <h6 class="text-sm mb-0">Allemagne</h6>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="text-center">
+                  <p class="text-xs font-weight-bold mb-0">Ventes:</p>
+                  <h6 class="text-sm mb-0">3 900</h6>
+                </div>
+              </td>
+              <td>
+                <div class="text-center">
+                  <p class="text-xs font-weight-bold mb-0">Valeur:</p>
+                  <h6 class="text-sm mb-0">440 000 €</h6>
+                </div>
+              </td>
+              <td class="align-middle text-sm">
+                <div class="col text-center">
+                  <p class="text-xs font-weight-bold mb-0">Rebond:</p>
+                  <h6 class="text-sm mb-0">40.22%</h6>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-30">
+                <div class="d-flex px-2 py-1 align-items-center">
+                  <div>
+                    <img src="../assets/img/icons/flags/GB.png" alt="Drapeau pays">
+                  </div>
+                  <div class="ms-4">
+                    <p class="text-xs font-weight-bold mb-0">Pays:</p>
+                    <h6 class="text-sm mb-0">Royaume-Uni</h6>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="text-center">
+                  <p class="text-xs font-weight-bold mb-0">Ventes:</p>
+                  <h6 class="text-sm mb-0">1 400</h6>
+                </div>
+              </td>
+              <td>
+                <div class="text-center">
+                  <p class="text-xs font-weight-bold mb-0">Valeur:</p>
+                  <h6 class="text-sm mb-0">190 700 €</h6>
+                </div>
+              </td>
+              <td class="align-middle text-sm">
+                <div class="col text-center">
+                  <p class="text-xs font-weight-bold mb-0">Rebond:</p>
+                  <h6 class="text-sm mb-0">23.44%</h6>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="w-30">
+                <div class="d-flex px-2 py-1 align-items-center">
+                  <div>
+                    <img src="../assets/img/icons/flags/BR.png" alt="Drapeau pays">
+                  </div>
+                  <div class="ms-4">
+                    <p class="text-xs font-weight-bold mb-0">Pays:</p>
+                    <h6 class="text-sm mb-0">Brésil</h6>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="text-center">
+                  <p class="text-xs font-weight-bold mb-0">Ventes:</p>
+                  <h6 class="text-sm mb-0">562</h6>
+                </div>
+              </td>
+              <td>
+                <div class="text-center">
+                  <p class="text-xs font-weight-bold mb-0">Valeur:</p>
+                  <h6 class="text-sm mb-0">143 960 €</h6>
+                </div>
+              </td>
+              <td class="align-middle text-sm">
+                <div class="col text-center">
+                  <p class="text-xs font-weight-bold mb-0">Rebond:</p>
+                  <h6 class="text-sm mb-0">32.14%</h6>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-
-      <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-        <div class="card">
-          <div class="card-body p-3">
-            <div class="row">
-              <div class="col-8">
-                <div class="numbers">
-                  <p class="text-sm mb-0 text-uppercase font-weight-bold">Total Tasks</p>
-                  <h5 class="font-weight-bolder" th:text="${totals.totalTasks}">
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-        <div class="card">
-          <div class="card-body p-3">
-            <div class="row">
-              <div class="col-8">
-                <div class="numbers">
-                  <p class="text-sm mb-0 text-uppercase font-weight-bold">Total Offers</p>
-                  <h5 class="font-weight-bolder" th:text="${totals.totalOffers}">
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-        <div class="card">
-          <div class="card-body p-3">
-            <div class="row">
-              <div class="col-8">
-                <div class="numbers">
-                  <p class="text-sm mb-0 text-uppercase font-weight-bold">Total Invoices</p>
-                  <h5 class="font-weight-bolder" th:text="${totals.totalInvoices}">
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-        <div class="card">
-          <div class="card-body p-3">
-            <div class="row">
-              <div class="col-8">
-                <div class="numbers">
-                  <p class="text-sm mb-0 text-uppercase font-weight-bold">Total Payments</p>
-                  <h5 class="font-weight-bolder"><a th:href="@{/payments}" th:text="${totals.totalPayments}"></a>
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
-    <div class="row mt-4">
-      <div class="col-12">
-        <div class="card z-index-2 h-100">
-          <div class="card-header pb-0 pt-3 bg-transparent">
-            <h6 class="text-capitalize">Nombres de Lead du mois de <span th:text="${mois}"></span> </h6>
-          </div>
-          <div class="card-body p-3">
-            <div class="chart">
-              <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-4">
-      <div class="col-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Status des Offres</h5>
-
-            <!-- Pie Chart -->
-            <div id="chartData" th:attr="data-inprogress=${inProgress}, data-won=${won}, data-lost=${lost}"></div>
-            <canvas id="pieChart" style="max-height: 400px;"></canvas>
+  </div>
+  <footer class="footer pt-3  ">
+    <div class="container-fluid">
+      <div class="row align-items-center justify-content-lg-between">
+        <div class="col-lg-6 mb-lg-0 mb-4">
+          <div class="copyright text-center text-sm text-muted text-lg-start">
+            &copy;
             <script>
-              document.addEventListener("DOMContentLoaded", () => {
-                const chartData = document.getElementById('chartData');
-                const inProgress = chartData.getAttribute('data-inprogress');
-                const won = chartData.getAttribute('data-won');
-                const lost = chartData.getAttribute('data-lost');
-                console.log(inProgress, won, lost);
-                new Chart(document.querySelector('#pieChart'), {
-                  type: 'pie',
-                  data: {
-                    labels: [
-                      'Lost',
-                      'Won',
-                      'In progress'
-                    ],
-                    datasets: [{
-                      label: 'Status',
-                      data: [inProgress, won, lost],
-                      backgroundColor: [
-                        'rgb(255, 99, 132)',
-                        'rgb(54, 162, 235)',
-                        'rgb(255, 205, 86)'
-                      ],
-                      hoverOffset: 4
-                    }]
-                  }
-                });
-              });
+              document.write(new Date().getFullYear())
             </script>
-              <!-- End Pie CHart -->
-
+            Tous droits réservés
           </div>
         </div>
-      </div>
-      <div class="col-lg-6">
-
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Bar CHart</h5>
-
-            <!-- Bar Chart -->
-            <canvas id="barChart" style="max-height: 400px;"></canvas>
-            <script>
-              document.addEventListener("DOMContentLoaded", () => {
-                new Chart(document.querySelector('#barChart'), {
-                  type: 'bar',
-                  data: {
-                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                    datasets: [{
-                      label: 'Bar Chart',
-                      data: [65, 59, 80, 81, 56, 55, 40],
-                      backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(255, 159, 64, 0.2)',
-                        'rgba(255, 205, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(201, 203, 207, 0.2)'
-                      ],
-                      borderColor: [
-                        'rgb(255, 99, 132)',
-                        'rgb(255, 159, 64)',
-                        'rgb(255, 205, 86)',
-                        'rgb(75, 192, 192)',
-                        'rgb(54, 162, 235)',
-                        'rgb(153, 102, 255)',
-                        'rgb(201, 203, 207)'
-                      ],
-                      borderWidth: 1
-                    }]
-                  },
-                  options: {
-                    scales: {
-                      y: {
-                        beginAtZero: true
-                      }
-                    }
-                  }
-                });
-              });
-            </script>
-            <!-- End Bar CHart -->
-
-          </div>
+        <div class="col-lg-6">
+          <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+            <li class="nav-item">
+              <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">À propos de nous</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">Licence</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-
-    </div>
-
-
-    <div class="row mt-4">
-      <div class="col-12">
-        <div class="card ">
-          <div class="card-header pb-0 p-3">
-            <div class="d-flex justify-content-between">
-              <h6 class="mb-2">Ventes par pays</h6>
-            </div>
-          </div>
-          <div class="table-responsive">
-            <table class="table align-items-center ">
-              <tbody>
-              <tr>
-                <td class="w-30">
-                  <div class="d-flex px-2 py-1 align-items-center">
-                    <div>
-                      <img src="../assets/img/icons/flags/US.png" alt="Drapeau pays">
-                    </div>
-                    <div class="ms-4">
-                      <p class="text-xs font-weight-bold mb-0">Pays:</p>
-                      <h6 class="text-sm mb-0">États-Unis</h6>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Ventes:</p>
-                    <h6 class="text-sm mb-0">2500</h6>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Valeur:</p>
-                    <h6 class="text-sm mb-0">230 900 €</h6>
-                  </div>
-                </td>
-                <td class="align-middle text-sm">
-                  <div class="col text-center">
-                    <p class="text-xs font-weight-bold mb-0">Rebond:</p>
-                    <h6 class="text-sm mb-0">29.9%</h6>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="w-30">
-                  <div class="d-flex px-2 py-1 align-items-center">
-                    <div>
-                      <img src="../assets/img/icons/flags/DE.png" alt="Drapeau pays">
-                    </div>
-                    <div class="ms-4">
-                      <p class="text-xs font-weight-bold mb-0">Pays:</p>
-                      <h6 class="text-sm mb-0">Allemagne</h6>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Ventes:</p>
-                    <h6 class="text-sm mb-0">3 900</h6>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Valeur:</p>
-                    <h6 class="text-sm mb-0">440 000 €</h6>
-                  </div>
-                </td>
-                <td class="align-middle text-sm">
-                  <div class="col text-center">
-                    <p class="text-xs font-weight-bold mb-0">Rebond:</p>
-                    <h6 class="text-sm mb-0">40.22%</h6>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="w-30">
-                  <div class="d-flex px-2 py-1 align-items-center">
-                    <div>
-                      <img src="../assets/img/icons/flags/GB.png" alt="Drapeau pays">
-                    </div>
-                    <div class="ms-4">
-                      <p class="text-xs font-weight-bold mb-0">Pays:</p>
-                      <h6 class="text-sm mb-0">Royaume-Uni</h6>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Ventes:</p>
-                    <h6 class="text-sm mb-0">1 400</h6>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Valeur:</p>
-                    <h6 class="text-sm mb-0">190 700 €</h6>
-                  </div>
-                </td>
-                <td class="align-middle text-sm">
-                  <div class="col text-center">
-                    <p class="text-xs font-weight-bold mb-0">Rebond:</p>
-                    <h6 class="text-sm mb-0">23.44%</h6>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="w-30">
-                  <div class="d-flex px-2 py-1 align-items-center">
-                    <div>
-                      <img src="../assets/img/icons/flags/BR.png" alt="Drapeau pays">
-                    </div>
-                    <div class="ms-4">
-                      <p class="text-xs font-weight-bold mb-0">Pays:</p>
-                      <h6 class="text-sm mb-0">Brésil</h6>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Ventes:</p>
-                    <h6 class="text-sm mb-0">562</h6>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center">
-                    <p class="text-xs font-weight-bold mb-0">Valeur:</p>
-                    <h6 class="text-sm mb-0">143 960 €</h6>
-                  </div>
-                </td>
-                <td class="align-middle text-sm">
-                  <div class="col text-center">
-                    <p class="text-xs font-weight-bold mb-0">Rebond:</p>
-                    <h6 class="text-sm mb-0">32.14%</h6>
-                  </div>
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="footer pt-3  ">
-      <div class="container-fluid">
-        <div class="row align-items-center justify-content-lg-between">
-          <div class="col-lg-6 mb-lg-0 mb-4">
-            <div class="copyright text-center text-sm text-muted text-lg-start">
-              &copy;
-              <script>
-                document.write(new Date().getFullYear())
-              </script>
-              Tous droits réservés
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-              <li class="nav-item">
-                <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">À propos de nous</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">Licence</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
+  </footer>
   </div>
 </main>
 <div class="fixed-plugin">
