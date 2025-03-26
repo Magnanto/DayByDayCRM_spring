@@ -9,15 +9,25 @@ public class Projet {
     String title;
     String description;
     Integer status_id;
+    String status;
     Integer user_assigned_id;
     Integer user_created_id;
     Integer client_id;
+    Client client;
     LocalDateTime deadline;
     LocalDateTime deleted_at;
     LocalDateTime created_at;
     LocalDateTime updated_at;
 
     public Projet() {
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     public int getId() {
@@ -86,6 +96,14 @@ public class Projet {
 
     public LocalDateTime getDeadline() {
         return deadline;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public void setDeadline(LocalDateTime deadline) {

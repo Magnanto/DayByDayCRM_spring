@@ -1,9 +1,7 @@
 package com.limulcomp.daybydaycrm_spring.controllers;
 
-import com.limulcomp.daybydaycrm_spring.api.DashboardApi;
-import com.limulcomp.daybydaycrm_spring.api.LeadApi;
-import com.limulcomp.daybydaycrm_spring.api.OfferApi;
-import com.limulcomp.daybydaycrm_spring.api.ProjetApi;
+import com.limulcomp.daybydaycrm_spring.api.*;
+import com.limulcomp.daybydaycrm_spring.model.InvoiceData;
 import com.limulcomp.daybydaycrm_spring.model.Lead;
 import com.limulcomp.daybydaycrm_spring.model.Offer;
 import com.limulcomp.daybydaycrm_spring.model.Projet;
@@ -22,21 +20,26 @@ public class DashboardController {
     private final ProjetApi projetApi = new ProjetApi();
     private final OfferApi offerApi = new OfferApi();
     private final LeadApi leadApi = new LeadApi();
+    private final InvoiceApi invoiceApi = new InvoiceApi();
     @GetMapping("/dashboard")
     public String dashboard(Model model) {
         Map<String, Object> totals = dashboardApi.getTotals();
-        int inProgess=offerApi.getInProgess().length;
+        int inProgress=offerApi.getInProgress().length;
         int lost=offerApi.getLost().length;
         int won=offerApi.getWon().length;
+
+
 
         Lead[] leads=leadApi.getThisMonth();
         List<LocalDate> dates = Utilitaires.getAllDaysOfMonth();
         String mois=Utilitaires.getCurrentMonthInFrench();
+        InvoiceData[] invoicesData=invoiceApi.getInvoicesAnnuelle();
 
+        model.addAttribute("invoicesData",invoicesData);
         model.addAttribute("mois",mois);
         model.addAttribute("leads", leads);
         model.addAttribute("dates", dates);
-        model.addAttribute("inProgress", inProgess);
+        model.addAttribute("inProgress", inProgress);
         model.addAttribute("lost", lost);
         model.addAttribute("won", won);
 

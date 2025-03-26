@@ -2,6 +2,7 @@ package com.limulcomp.daybydaycrm_spring.api;
 
 import com.limulcomp.daybydaycrm_spring.model.Client;
 import com.limulcomp.daybydaycrm_spring.model.Invoice;
+import com.limulcomp.daybydaycrm_spring.model.InvoiceData;
 import org.springframework.web.client.RestTemplate;
 
 public class InvoiceApi {
@@ -19,5 +20,10 @@ public class InvoiceApi {
 
     public long count() {
         return restTemplate.getForObject(API_URL + "/count", Long.class);
+    }
+
+    public InvoiceData[] getInvoicesAnnuelle(){
+        InvoiceData[] invoices = restTemplate.getForObject(API_URL + "/turnover", InvoiceData[].class);
+        return invoices;
     }
 }

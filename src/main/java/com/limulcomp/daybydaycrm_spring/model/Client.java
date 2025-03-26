@@ -16,7 +16,7 @@ public class Client {
     LocalDateTime deleted_at;
     LocalDateTime created_at;
     LocalDateTime updated_at;
-
+    User user;
     public Client() {
     }
 
@@ -122,5 +122,13 @@ public class Client {
 
     public void setUpdated_at(LocalDateTime updated_at) {
         this.updated_at = updated_at;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
