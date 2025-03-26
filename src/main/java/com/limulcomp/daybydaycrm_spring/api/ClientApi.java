@@ -1,5 +1,6 @@
 package com.limulcomp.daybydaycrm_spring.api;
 
+import com.limulcomp.daybydaycrm_spring.model.User;
 import org.springframework.web.client.RestTemplate;
 import com.limulcomp.daybydaycrm_spring.model.Client;
 
@@ -12,6 +13,10 @@ public class ClientApi {
 
     public Client[] getAll() {
         Client[] clients = restTemplate.getForObject(API_URL, Client[].class);
+        for (Client client : clients) {
+            User user=new UsersApi().getById(client.getUser_id());
+            client.setUser(user);
+        }
         return clients;
     }
 

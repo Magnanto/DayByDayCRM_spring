@@ -20,7 +20,7 @@ public class OfferApi {
         return restTemplate.getForObject(API_URL + "/count", Long.class);
     }
 
-    public Offer[] getInProgess(){
+    public Offer[] getInProgress(){
         Offer[] offers = restTemplate.getForObject(API_URL + "/status/progress", Offer[].class);
         return offers;
     }

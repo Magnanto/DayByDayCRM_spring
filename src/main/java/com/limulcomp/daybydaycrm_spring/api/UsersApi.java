@@ -1,6 +1,8 @@
 package com.limulcomp.daybydaycrm_spring.api;
 
-import org.apache.catalina.User;
+import com.limulcomp.daybydaycrm_spring.model.Task;
+
+import com.limulcomp.daybydaycrm_spring.model.User;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +33,9 @@ public class UsersApi {
         } catch (HttpClientErrorException | HttpServerErrorException e) {
             return ResponseEntity.status(e.getStatusCode()).body(e.getResponseBodyAsString());
         }
+    }
+    public User getById(int id) {
+        return restTemplate.getForObject(API_URL + "/" + id, User.class);
     }
 
 }
